@@ -32,7 +32,7 @@ Please also create a div with an id of chart in your HTML.
 
 <pre><code>  
 
-<div id="chart"></div>
+	<div id="chart"></div>
 
 </code></pre>
 
