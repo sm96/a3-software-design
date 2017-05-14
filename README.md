@@ -30,11 +30,10 @@ This API uses D3, so in order to actually create visualizations using this API, 
 
 Please also create a div with an id of chart in your HTML.
 
-<pre><code>  
-
-	<div id="chart"></div>
-
-</code></pre>
+```html
+<div id="chart"></div>
+alert(s);
+```
 
 Now that set up is done, you should be all set to start creating some donut charts!
 
