@@ -2,7 +2,7 @@
 
 Hello. This API will help you to easily create beautiful donut charts to visualize sources of data.
 
-#Set Up
+##Set Up
 
 All you need is data with two columns, one for the category and the other for it's corresponding value. This API will allow you to create a donut chart with colored categories and corresponding sizes based on the values in the data.
 
@@ -38,7 +38,7 @@ Please also create a div with an id of chart in your HTML.
 
 Now that set up is done, you should be all set to start creating some donut charts!
 
-#Methods
+##Methods
 
 While there is a default donut chart that will be created from just the data, you also have the option of changing aspects of the chart to fit your needs. There are five methods that can be changed. 
 
