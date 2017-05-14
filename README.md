@@ -2,6 +2,8 @@
 
 Hello. This API will help you to easily create beautiful donut charts to visualize sources of data.
 
+#Set Up
+
 All you need is data with two columns, one for the category and the other for it's corresponding value. This API will allow you to create a donut chart with colored categories and corresponding sizes based on the values in the data.
 
 In order to use the API effectively, the data needs to be structured like the following, with "keys" and "values". If the data is not structured with a "key" for the category and/or a "value" for the corresponding value, the API will not work.
@@ -17,6 +19,26 @@ This following example shows how your data should be structured and look like to
           { key: 'e', value: 14 }
         ];
 </code></pre>
+
+This API uses D3, so in order to actually create visualizations using this API, you need to have the D3 library (version 4) integrated into your HTML code. You can do that by adding this line of code into your HTML code.
+
+<pre><code>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/d3.min.js"></script>
+
+</code></pre>
+
+Please also create a div with an id of chart in your HTML.
+
+<pre><code>  
+
+<div id="chart"></div>
+
+</code></pre>
+
+Now that set up is done, you should be all set to start creating some donut charts!
+
+#Methods
 
 While there is a default donut chart that will be created from just the data, you also have the option of changing aspects of the chart to fit your needs. There are five methods that can be changed. 
 
