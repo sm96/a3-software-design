@@ -20,7 +20,7 @@ This following example shows how your data should be structured and look like to
 
 While there is a default donut chart that will be created from just the data, you also have the option of changing aspects of the chart to fit your needs. There are five methods that can be changed. 
 
-The five methods are:
+The five methods are:<br>
 .width()<br>
 .height()<br>
 .donutWidth()<br>
