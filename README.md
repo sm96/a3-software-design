@@ -32,7 +32,6 @@ Please also create a div with an id of chart in your HTML.
 
 ```html
 <div id="chart"></div>
-alert(s);
 ```
 
 Now that set up is done, you should be all set to start creating some donut charts!
