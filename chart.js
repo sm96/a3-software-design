@@ -1,16 +1,15 @@
 var CircleChart = function() {
 
-    var width = 360,
-        height = 360,
+    var width = 960,
+        height = 500,
+        cornerRadius = 3,
+        padAngle = 0.015,
         donutWidth = 75;
-        margin = {top: 10, right: 10, bottom: 10, left: 10},
-        color = d3.scaleOrdinal(d3.schemeCategory20b);
-        drawWidth = width - margin.left - margin.right,
-        drawHeight = height - margin.top - margin.bottom;
 
     function chart(selection){
         selection.each(function(data) {
         radius = Math.min(width, height) / 2;
+        color = d3.scaleOrdinal(d3.schemeCategory20c);
         var svg = d3.select('#chart')
           .append('svg')
           .attr('width', width)
@@ -21,10 +20,12 @@ var CircleChart = function() {
 
         var arc = d3.arc()
           .innerRadius(radius - donutWidth)            
-          .outerRadius(radius);
+          .outerRadius(radius)
+          .cornerRadius(cornerRadius)
+          .padAngle(padAngle);
 
         var pie = d3.pie()
-          .value(function(d) { return d.count; })
+          .value(function(d) { return d.value; })
           .sort(null);
 
         var path = svg.selectAll('path')
@@ -33,7 +34,7 @@ var CircleChart = function() {
           .append('path')
           .attr('d', arc)
           .attr('fill', function(d, i) {
-            return color(d.data.label);
+            return color(d.data.key);
           });
         });
     }
@@ -50,27 +51,21 @@ var CircleChart = function() {
         return chart;
     };
 
-    chart.margin = function(value) {
-        if (!arguments.length) return margin;
-        margin = value;
-        return chart;
-    };
-
     chart.donutWidth = function(value) {
         if (!arguments.length) return donutWidth;
         donutWidth = value;
         return chart;
     };
 
-    chart.color = function(value) {
-        if (!arguments.length) return color;
-        color = value;
+    chart.cornerRadius = function(value) {
+        if (!arguments.length) return cornerRadius;
+        cornerRadius = value;
         return chart;
     };
 
-    chart.variable = function(value) {
-        if (!arguments.length) return variable;
-        variable = value;
+    chart.padAngle = function(value) {
+        if (!arguments.length) return padAngle;
+        padAngle = value;
         return chart;
     };
 
